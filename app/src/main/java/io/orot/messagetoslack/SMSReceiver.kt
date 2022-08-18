@@ -37,7 +37,7 @@ class SMSReceiver : BroadcastReceiver() {
             Log.d(TAG, "time :: " + smsMessage.getTimestampMillis());
 
             val phone = smsMessage.displayOriginatingAddress
-            val message = smsMessage.displayMessageBody
+            val message = smsMessage.messageBody
 
             Log.d("ASdsadsdaads", "$phone ")
             Log.d("ASdsadsdaads", "$message ")
@@ -66,7 +66,7 @@ class SMSReceiver : BroadcastReceiver() {
                     if (sendingTransmissionPhoneStatus && sendingTransmissionCharacterStatus) {
                         compositeDisposable.add(
                             SlackRepository
-                                .sendMsgToSlack(RequestMsg(msg = smsMessage.displayMessageBody))
+                                .sendMsgToSlack(RequestMsg(msg = message))
                                 .subscribeOn(Schedulers.io())
                                 .observeOn(Schedulers.io())
                                 .subscribe()
