@@ -61,7 +61,7 @@ fun MainView(viewModel: MainVM){
             Column(
                 modifier = Modifier.padding(horizontal = 16.dp)
             ) {
-                CustomTextField(caption = "수신 전화번호", keyboardType = KeyboardType.Phone, imeAction = ImeAction.Next, isPhoneField = true, viewModel = viewModel)
+                CustomTextField(caption = "수신 전화번호", keyboardType = KeyboardType.Text, imeAction = ImeAction.Next, isPhoneField = true, viewModel = viewModel)
                 Spacer(modifier = Modifier.height(12.dp))
             }
         }

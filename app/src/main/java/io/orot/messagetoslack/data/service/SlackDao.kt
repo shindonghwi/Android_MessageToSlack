@@ -11,13 +11,13 @@ interface SlackDao {
     fun getPhones(): List<PhoneEntity>
 
     @Query("Select * From PhoneEntity WHERE phone IN (:phone)")
-    fun getPhone(phone: String): PhoneEntity
+    fun getPhone(phone: String): PhoneEntity?
 
     @Query("Select * From IncludeCharactersEntity")
     fun getIncludeCharacters(): List<IncludeCharactersEntity>
 
     @Query("Select * From IncludeCharactersEntity WHERE character IN (:character)")
-    fun getIncludeCharacter(character: String): IncludeCharactersEntity
+    fun getIncludeCharacter(character: String): IncludeCharactersEntity?
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     fun insertPhone(phone: PhoneEntity): Long
