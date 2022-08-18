@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "io.orot.messagetoslack"
-        minSdk 21
+        minSdk 26
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -75,4 +75,11 @@ dependencies {
 
     // vm
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+
+    kapt "org.xerial:sqlite-jdbc:3.34.0"
+
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+
+
 }

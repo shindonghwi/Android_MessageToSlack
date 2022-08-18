@@ -1,11 +1,9 @@
 package io.orot.messagetoslack
 
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
-class MainActivityViewModel : ViewModel() {
+class MainVM : ViewModel() {
 
     var phoneList = mutableStateListOf<String>()
     var characterList = mutableStateListOf<String>()
