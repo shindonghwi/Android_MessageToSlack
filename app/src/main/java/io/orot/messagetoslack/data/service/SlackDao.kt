@@ -1,8 +1,8 @@
 package io.orot.messagetoslack.data.service
 
 import androidx.room.*
-import io.orot.messagetoslack.model.IncludeCharactersEntity
-import io.orot.messagetoslack.model.PhoneEntity
+import io.orot.messagetoslack.model.slack.IncludeCharactersEntity
+import io.orot.messagetoslack.model.slack.PhoneEntity
 
 @Dao
 interface SlackDao {

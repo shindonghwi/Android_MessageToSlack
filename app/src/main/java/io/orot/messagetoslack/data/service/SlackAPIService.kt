@@ -1,6 +1,5 @@
 package io.orot.messagetoslack.data.service
-import io.orot.messagetoslack.model.RequestMsg
-import io.orot.messagetoslack.model.ResponseMsg
+import io.orot.messagetoslack.model.slack.RequestMsg
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.*

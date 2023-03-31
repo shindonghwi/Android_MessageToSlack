@@ -1,4 +1,4 @@
-package io.orot.messagetoslack.model
+package io.orot.messagetoslack.model.slack
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

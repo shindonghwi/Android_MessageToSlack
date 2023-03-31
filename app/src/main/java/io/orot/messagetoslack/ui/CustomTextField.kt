@@ -21,8 +21,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import io.orot.messagetoslack.App
 import io.orot.messagetoslack.MainVM
-import io.orot.messagetoslack.model.IncludeCharactersEntity
-import io.orot.messagetoslack.model.PhoneEntity
+import io.orot.messagetoslack.model.slack.IncludeCharactersEntity
+import io.orot.messagetoslack.model.slack.PhoneEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

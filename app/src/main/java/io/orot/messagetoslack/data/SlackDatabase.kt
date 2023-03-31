@@ -5,8 +5,8 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import io.orot.messagetoslack.data.service.SlackDao
-import io.orot.messagetoslack.model.IncludeCharactersEntity
-import io.orot.messagetoslack.model.PhoneEntity
+import io.orot.messagetoslack.model.slack.IncludeCharactersEntity
+import io.orot.messagetoslack.model.slack.PhoneEntity
 
 @Database(
     entities = [PhoneEntity::class, IncludeCharactersEntity::class],

@@ -1,5 +1,6 @@
 package io.orot.messagetoslack.data.api
 
+import io.orot.messagetoslack.data.service.NotionAPIService
 import io.orot.messagetoslack.data.service.SlackAPIService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -39,7 +40,20 @@ object APIClient {
             .build()
             .create(SlackAPIService::class.java)
     }
+
+    fun getNotionClient(): NotionAPIService {
+        return Retrofit.Builder()
+            .client(getOkHttpClient())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("https://api.notion.com/")
+            .build()
+            .create(NotionAPIService::class.java)
+    }
 }
 
 @JvmField
 val slackClient = APIClient.getSlackClient()
+
+@JvmField
+val notionClient = APIClient.getNotionClient()
